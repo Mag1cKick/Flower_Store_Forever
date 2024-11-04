@@ -1,12 +1,17 @@
-package flower.store;
+package flower.store.demo;
 
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
 
-
-
+@Entity
+@Data
 @Setter
-public class Flower {
+public class Flower extends Item {
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private static final double ROSE_SEPAL_LENGTH = 10;
     private static final double ROSE_PRICE = 100;
     @Getter
@@ -30,6 +35,10 @@ public class Flower {
         this.color = color;
         this.price = price;
         this.flowerType = flowerType;
+    }
+
+    public Flower(FlowerColor color) {
+        this.color = color;
     }
 
     public String getColor() {

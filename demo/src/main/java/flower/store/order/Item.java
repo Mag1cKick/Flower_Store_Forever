@@ -1,6 +1,6 @@
 package flower.store.order;
 
-import flower.store.Flower;
+import flower.store.demo.Flower;
 
 public class Item {
     private Flower flower;

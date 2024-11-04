@@ -1,4 +1,4 @@
-package flower.store;
+package flower.store.demo;
 
 import lombok.Getter;
 import lombok.Setter;
